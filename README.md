@@ -4,22 +4,108 @@ This project uses machine learning models to detect whether a news article is **
 
 ---
 
-## 📌 Project Overview
+## Problem Statement
 
--  **Goal**: Classify news articles as "Real" or "Fake"
--  **ML Models Used**: 
-  - Logistic Regression (LR)
-  - Random Forest Classifier (RFC)
--  Includes complete text preprocessing: tokenization, lowercasing, stopword removal, punctuation cleanup
--  Ensemble support: Combine predictions for higher accuracy
+With the rapid growth of online media, misinformation spreads quickly. Manual verification is slow and expensive. This project develops an automated system capable of identifying fake news articles based on textual content.
 
 ---
 
-## 🛠️ Tech Stack
+## Dataset
 
-- Python 3.x
-- Pandas
-- Scikit-learn
-- NLTK
-- Jupyter Notebook or any Python IDE
+We use a labeled dataset containing news articles with the following fields:
 
+* title
+* text
+* label (FAKE / REAL)
+
+Typical dataset sources:
+
+* Kaggle Fake News Dataset
+* ISOT Fake News Dataset
+
+---
+
+## Project Pipeline
+
+### 1. Data Preprocessing
+
+* Lowercasing text
+* Removing punctuation
+* Removing stopwords
+* Tokenization
+* Lemmatization
+
+### 2. Feature Engineering
+
+Text is converted into numerical vectors using:
+
+**TF-IDF Vectorization**
+
+* Unigrams and bigrams
+* Frequency importance weighting
+
+### 3. Model Training
+
+We train machine learning classifiers on vectorized text:
+
+* Passive Aggressive Classifier
+* Logistic Regression
+* Linear SVM
+
+### 4. Evaluation Metrics
+
+Model performance is evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix
+
+### 5. Prediction System
+
+User can input a news article → model predicts:
+
+**REAL NEWS** or **FAKE NEWS**
+
+---
+
+## Results
+
+Typical performance achieved:
+
+* Accuracy: ~92–98% (depending on dataset)
+* Balanced precision & recall
+
+---
+
+## Future Improvements
+
+* Deep learning models (LSTM / Transformers)
+* Detect sarcasm & satire articles
+* Multi-language support
+* Web interface deployment
+
+---
+
+## Technologies Used
+
+* Python
+* pandas
+* numpy
+* scikit-learn
+* nltk / spacy
+
+---
+
+## Learning Outcomes
+
+This project demonstrates:
+
+* End-to-end NLP pipeline
+* Text vectorization techniques
+* Classification modeling
+* Model evaluation and validation
+* Real-world misinformation detection application
+
+---
