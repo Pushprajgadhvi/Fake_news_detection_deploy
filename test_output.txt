@@ -1,0 +1,53 @@
+[US Real News]
+  Overall    : Real News
+  Uncertain  : False
+  Avg conf   : 87.2%
+  Legit score: 0
+    Logistic Regression: Real News (99.6%)
+    Passive-Aggressive: Real News (82.0%)
+    Random Forest: Real News (79.9%)
+
+[ISRO Real News]
+  Overall    : Uncertain
+  Uncertain  : True
+  Avg conf   : 75.8%
+  Legit score: 5
+    Logistic Regression: Fake News (97.0%)
+    Passive-Aggressive: Fake News (68.4%)
+    Random Forest: Fake News (62.1%)
+
+[Indian Parliament News]
+  Overall    : Real News
+  Uncertain  : False
+  Avg conf   : 70.0%
+  Legit score: 7
+    Logistic Regression: Real News (73.5%)
+    Passive-Aggressive: Real News (59.1%)
+    Random Forest: Real News (77.4%)
+
+[Fake: Bleach COVID Cure]
+  Overall    : Fake News
+  Uncertain  : False
+  Avg conf   : 91.8%
+  Legit score: 0
+    Logistic Regression: Fake News (99.7%)
+    Passive-Aggressive: Fake News (88.3%)
+    Random Forest: Fake News (87.2%)
+  Fake Reasons:
+    - Sensationalist language detected: 'breaking' — real journalism avoids trigger words design...
+    - Contains conspiracy-style phrases suggesting information suppression ('big pharma'). Legit...
+    - Makes extraordinary medical or scientific claims without citing peer-reviewed evidence or ...
+    - Uses emotional urgency to pressure sharing ('wake up') — a hallmark of viral misinformatio...
+    - Excessive exclamation marks (4) — credible articles rarely use them in the body text....
+
+[Fake: Soros Paid Protestors]
+  Overall    : Fake News
+  Uncertain  : False
+  Avg conf   : 85.2%
+  Legit score: 0
+    Logistic Regression: Fake News (99.3%)
+    Passive-Aggressive: Fake News (78.5%)
+    Random Forest: Fake News (77.8%)
+  Fake Reasons:
+    - Sensationalist language detected: 'breaking' — real journalism avoids trigger words design...
+
