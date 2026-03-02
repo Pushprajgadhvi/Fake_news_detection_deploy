@@ -1,111 +1,90 @@
-# 📰 Fake News Detection Using Machine Learning
+# 📰 Fake News Detection Web Application
 
-This project uses machine learning models to detect whether a news article is **real** or **fake**, based on the article's text. It includes models like Logistic Regression (LR) and Random Forest Classifier (RFC), trained on a labeled dataset of news articles.
-
----
-
-## Problem Statement
-
-With the rapid growth of online media, misinformation spreads quickly. Manual verification is slow and expensive. This project develops an automated system capable of identifying fake news articles based on textual content.
+A Machine Learning–powered web application that classifies news text as **Fake** or **Real** using Natural Language Processing (NLP) and a trained classification model.  
+The system provides a **Flask REST API** and an interactive **web interface** for real-time predictions.
 
 ---
 
-## Dataset
+## 🚀 Features
 
-We use a labeled dataset containing news articles with the following fields:
-
-* title
-* text
-* label (FAKE / REAL)
-
-Typical dataset sources:
-
-* Kaggle Fake News Dataset
-* ISOT Fake News Dataset
+- Detect Fake vs Real news instantly
+- Clean web interface for user input
+- Flask backend with REST API
+- TF-IDF vectorization for NLP features
+- Pretrained ML model integration
+- Deployment-ready project structure
 
 ---
 
-## Project Pipeline
+## 🧠 ML Pipeline
 
-### 1. Data Preprocessing
-
-* Lowercasing text
-* Removing punctuation
-* Removing stopwords
-* Tokenization
-* Lemmatization
-
-### 2. Feature Engineering
-
-Text is converted into numerical vectors using:
-
-**TF-IDF Vectorization**
-
-* Unigrams and bigrams
-* Frequency importance weighting
-
-### 3. Model Training
-
-We train machine learning classifiers on vectorized text:
-
-* Passive Aggressive Classifier
-* Logistic Regression
-* Linear SVM
-
-### 4. Evaluation Metrics
-
-Model performance is evaluated using:
-
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
-
-### 5. Prediction System
-
-User can input a news article → model predicts:
-
-**REAL NEWS** or **FAKE NEWS**
+1. Text preprocessing (cleaning, normalization)
+2. Feature extraction using TF-IDF
+3. Classification using trained ML model
+4. Prediction served via Flask API
+5. Display result on web interface
 
 ---
 
-## Results
-
-Typical performance achieved:
-
-* Accuracy: ~92–98% (depending on dataset)
-* Balanced precision & recall
-
----
-
-## Future Improvements
-
-* Deep learning models (LSTM / Transformers)
-* Detect sarcasm & satire articles
-* Multi-language support
-* Web interface deployment
-
----
-
-## Technologies Used
-
-* Python
-* pandas
-* numpy
-* scikit-learn
-* nltk / spacy
+## 📁 Project Structure
+fake-news-detection/
+│
+├── app.py
+├── model.pkl
+├── vectorizer.pkl
+├── requirements.txt
+│
+├── templates/
+│ └── index.html
+│
+├── static/
+│ ├── style.css
+│ └── script.js
+│
+└── README.md
 
 ---
 
-## Learning Outcomes
+## Create virtual environment:
 
-This project demonstrates:
 
-* End-to-end NLP pipeline
-* Text vectorization techniques
-* Classification modeling
-* Model evaluation and validation
-* Real-world misinformation detection application
+python -m venv venv
 
 ---
+
+## Activate environment:
+
+Windows:
+
+venv\Scripts\activate
+
+
+---
+
+## 🧰 Technologies
+
+- Python
+- Flask
+- Scikit-learn
+- Pandas
+- NumPy
+- HTML
+- CSS
+- JavaScript
+- TF-IDF NLP
+
+---
+
+## 🌍 Deployment Ready
+
+Can be deployed on:
+
+- Render
+- Railway
+- Hugging Face Spaces
+- Docker
+- AWS / Azure
+
+---
+
+
