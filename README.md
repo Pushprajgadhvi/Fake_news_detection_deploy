@@ -1,32 +1,55 @@
 # 📰 Fake News Detection Web Application
 
-A Machine Learning–powered web application that classifies news text as **Fake** or **Real** using Natural Language Processing (NLP) and a trained classification model.  
-The system provides a **Flask REST API** and an interactive **web interface** for real-time predictions.
+A Machine Learning powered web application that classifies news articles as **Fake** or **Real** using Natural Language Processing (NLP) and a trained Scikit-learn model.
+
+The system provides a Flask REST API and a responsive web interface for real-time predictions.
 
 ---
 
 ## 🚀 Features
 
-- Detect Fake vs Real news instantly
-- Clean web interface for user input
-- Flask backend with REST API
-- TF-IDF vectorization for NLP features
-- Pretrained ML model integration
+- Real-time Fake vs Real news classification
+- Clean and responsive user interface
+- RESTful API endpoint
+- TF-IDF based NLP feature extraction
+- Pretrained model integration
 - Deployment-ready project structure
 
 ---
 
-## 🧠 ML Pipeline
+## 🧠 Machine Learning Pipeline
 
-1. Text preprocessing (cleaning, normalization)
-2. Feature extraction using TF-IDF
-3. Classification using trained ML model
-4. Prediction served via Flask API
-5. Display result on web interface
+1. Text Preprocessing
+   - Lowercasing
+   - URL removal
+   - Punctuation cleaning
+   - Whitespace normalization
+
+2. Feature Engineering
+   - TF-IDF Vectorization
+   - Sparse matrix transformation
+
+3. Model
+   - Logistic Regression (or any trained classifier)
+   - Serialized using Pickle
+
+4. Inference Flow
+
+   User Input  
+   ↓  
+   Clean Text  
+   ↓  
+   TF-IDF Transform  
+   ↓  
+   Model Prediction  
+   ↓  
+   JSON Response  
 
 ---
 
 ## 📁 Project Structure
+
+```bash
 fake-news-detection/
 │
 ├── app.py
@@ -35,33 +58,89 @@ fake-news-detection/
 ├── requirements.txt
 │
 ├── templates/
-│ └── index.html
+│   └── index.html
 │
 ├── static/
-│ ├── style.css
-│ └── script.js
+│   ├── style.css
+│   └── script.js
 │
 └── README.md
+```
 
 ---
 
-## Create virtual environment:
+## ⚙️ Installation Guide
 
+### 1️⃣ Clone Repository
 
+```bash
+git clone https://github.com/your-username/fake-news-detection.git
+cd fake-news-detection
+```
+
+### 2️⃣ Create Virtual Environment
+
+```bash
 python -m venv venv
+```
 
----
-
-## Activate environment:
+### 3️⃣ Activate Environment
 
 Windows:
-
+```bash
 venv\Scripts\activate
+```
 
+Mac/Linux:
+```bash
+source venv/bin/activate
+```
+
+### 4️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-## 🧰 Technologies
+## ▶️ Run the Application
+
+```bash
+python app.py
+```
+
+Open in browser:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## 🔌 API Documentation
+
+### POST /predict
+
+Request Body (JSON):
+
+```json
+{
+  "text": "Your news article text here"
+}
+```
+
+Response:
+
+```json
+{
+  "prediction": "Real News"
+}
+```
+
+---
+
+## 🧰 Technologies Used
 
 - Python
 - Flask
@@ -71,20 +150,29 @@ venv\Scripts\activate
 - HTML
 - CSS
 - JavaScript
-- TF-IDF NLP
+- TF-IDF
 
 ---
 
-## 🌍 Deployment Ready
+## 🌍 Deployment Options
 
-Can be deployed on:
+This project can be deployed on:
 
 - Render
 - Railway
 - Hugging Face Spaces
 - Docker
-- AWS / Azure
+- AWS
+- Azure
 
 ---
 
+## 📈 Future Improvements
 
+- Add confidence probability score
+- Compare multiple ML models
+- Integrate live News API
+- Convert backend to FastAPI
+- Add Docker containerization
+
+---
