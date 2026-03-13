@@ -1,4 +1,5 @@
 # 📰 Fake News Detection Web Application
+---
 
 A Machine Learning powered web application that classifies news articles as **Fake** or **Real** using Natural Language Processing (NLP) and a trained Scikit-learn model.
 
